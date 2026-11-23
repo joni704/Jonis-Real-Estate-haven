@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251f">
+    <meta name="description" content="Discover exceptional homes and thoughtful real estate guidance with Haven & Co.">
+    <title>JONIS REAL ESTATE HAVEN</title>
+    
+   
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="Haven and Co home"><span
+                    class="brand-mark">H</span><span>Haven<span class="brand-dot">.</span></span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navLinks"><span></span><span></span></button>
+            <div class="nav-links" id="navLinks">
+                <a href="#top">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a
+                    href="#stories">Stories</a>
+                <a class="nav-favorites" href="#properties"><span class="heart-mini">♡</span> Saved <span
+                        class="favorite-count" id="favoriteCount">0</span></a>
+                <a class="button button-dark nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="hero-image" role="img" aria-label="Modern home surrounded by greenery"></div>
+            <div class="hero-content container">
+                <p class="eyebrow eyebrow-light"><span></span> A better way to find home</p>
+                <h1>Find a place<br>to <em>belong.</em></h1>
+                <p class="hero-copy">Thoughtful homes, good people, and a little help finding your next chapter.</p>
+                <a href="#properties" class="hero-link">Explore our homes <span>↓</span></a>
+            </div>
+            <div class="hero-note"><span class="note-line"></span> PLACES WITH A POINT OF VIEW</div>
+            <form class="search-panel container" id="searchForm">
+                <label class="search-field"><span>I'm looking for</span><select id="searchType"
+                        aria-label="Property type">
+                        <option value="">Any property</option>
+                        <option value="Villa">A house</option>
+                        <option value="Apartment">An apartment</option>
+                        <option value="Penthouse">A penthouse</option>
+                    </select></label>
+                <label class="search-field"><span>Somewhere around</span><input id="searchLocation" type="search"
+                        placeholder="City or neighborhood" autocomplete="off"></label>
+                <label class="search-field search-price"><span>My budget is</span><select id="searchPrice"
+                        aria-label="Maximum price">
+                        <option value="">Any price</option>
+                        <option value="750000">Up to $750k</option>
+                        <option value="1200000">Up to $1.2m</option>
+                        <option value="2000000">Up to $2m</option>
+                    </select></label>
+                <button class="button button-green search-button" type="submit"><span aria-hidden="true">⌕</span> Find a
+                    home</button>
+            </form>
+        </section>
+
+        <section class="section properties-section" id="properties">
+            <div class="container">
+                <div class="section-heading heading-row reveal">
+                    <div>
+                        <p class="eyebrow"><span></span> THE GOOD HOMES</p>
+                        <h2>Find your <em>somewhere.</em></h2>
+                    </div>
+                    <p class="section-intro">A few of our favorite places, chosen for the way they feel as much as the
+                        way they look.</p>
+                </div>
+                <div class="property-toolbar reveal">
+                    <div class="filter-tabs" role="group" aria-label="Filter properties">
+                        <button class="filter-tab active" data-filter="All" aria-pressed="true">All homes</button>
+                        <button class="filter-tab" data-filter="For Sale" aria-pressed="false">For sale</button>
+                        <button class="filter-tab" data-filter="For Rent" aria-pressed="false">For rent</button>
+                        <button class="filter-tab" data-filter="Luxury Villas" aria-pressed="false">Villas</button>
+                    </div>
+                    <p class="results-count" id="resultsCount" aria-live="polite"></p>
+                </div>
+                <div class="property-grid" id="propertyGrid" aria-live="polite"></div>
+                <div class="load-more-wrap" id="loadMoreWrap">
+                    <p class="load-more-count" id="loadMoreCount" aria-live="polite"></p>
+                    <button class="button button-green load-more-button" id="loadMoreButton" type="button">Load More Properties <span aria-hidden="true">↓</span></button>
+                </div>
+                <div class="empty-state" id="emptyState" hidden><span>⌂</span>
+                    <h3>No homes found just yet</h3>
+                    <p>Try changing a filter or widening your search.</p><button class="text-button"
+                        id="resetFilters">Clear filters <span>↗</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container about-layout">
+                <div class="about-visual reveal">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                        alt="Sunlit living space with warm natural materials" loading="lazy">
+                    <div class="about-stamp"><strong>12</strong><span>years of<br>finding home</span></div>
+                </div>
+                <div class="about-copy reveal">
+                    <p class="eyebrow"><span></span> A LITTLE ABOUT US</p>
+                    <h2>Real estate, with<br>a <em>human touch.</em></h2>
+                    <p>Moving is a big deal. We believe finding a home should feel less like a transaction and more like
+                        being understood. So we listen first, show up fully, and stay by your side long after the keys
+                        change hands.</p>
+                    <a class="text-button" href="#contact">Get to know Haven <span>↗</span></a>
+                    <div class="about-stats">
+                        <div><strong>1,200<span>+</span></strong><small>happy home stories</small></div>
+                        <div><strong>98<span>%</span></strong><small>clients by referral</small></div>
+                        <div><strong>4.9<span>/5</span></strong><small>average client rating</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-section" id="calculator">
+            <div class="container calculator-layout">
+                <div class="calculator-copy reveal">
+                    <p class="eyebrow eyebrow-light"><span></span> A LITTLE PLANNING</p>
+                    <h2>Make room<br>for <em>what's next.</em></h2>
+                    <p>A quick estimate to help you picture the monthly side of home ownership. Adjust the details to
+                        make it yours.</p>
+                    <div class="calculator-footnote">A guide, not a loan offer. Taxes and insurance aren't included.
+                    </div>
+                </div>
+                <div class="calculator-card reveal">
+                    <div class="calc-row">
+                        <div class="calc-label"><label for="homePrice">Home price</label><output
+                                id="homePriceOutput">$650,000</output></div><input id="homePrice" type="range"
+                            min="150000" max="2000000" step="10000" value="650000">
+                    </div>
+                    <div class="calc-row">
+                        <div class="calc-label"><label for="downPayment">Down payment</label><output
+                                id="downPaymentOutput">20% · $130,000</output></div><input id="downPayment" type="range"
+                            min="5" max="50" step="1" value="20">
+                    </div>
+                    <div class="calc-two">
+                        <div class="calc-row">
+                            <div class="calc-label"><label for="interestRate">Interest rate</label><output
+                                    id="interestRateOutput">6.5%</output></div><input id="interestRate" type="range"
+                                min="2" max="12" step="0.1" value="6.5">
+                        </div>
+                        <div class="calc-row">
+                            <div class="calc-label"><label for="loanTerm">Loan term</label><output
+                                    id="loanTermOutput">30 years</output></div><input id="loanTerm" type="range"
+                                min="10" max="30" step="5" value="30">
+                        </div>
+                    </div>
+                    <div class="payment-result">
+                        <div><span>ESTIMATED MONTHLY PAYMENT</span><strong id="monthlyPayment">$3,287</strong></div>
+                        <span class="payment-icon">↗</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <p class="eyebrow"><span></span> THE HAVEN DIFFERENCE</p>
+                    <h2>Good people. <em>Good places.</em></h2>
+                    <p>We're here for the whole journey, not just the house hunt.</p>
+                </div>
+                <div class="values-grid">
+                    <article class="value-card reveal"><span class="value-icon">✳</span>
+                        <h3>Thoughtful by nature</h3>
+                        <p>No endless listings. Just considered recommendations that fit the life you want to live.</p>
+                    </article>
+                    <article class="value-card reveal"><span class="value-icon">⌂</span>
+                        <h3>Local, in every way</h3>
+                        <p>We know the corner shops, the morning light, and which streets feel like you.</p>
+                    </article>
+                    <article class="value-card reveal"><span class="value-icon">♡</span>
+                        <h3>Always in your corner</h3>
+                        <p>Clear advice, honest answers, and a real person to call at every turn.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories-section" id="stories">
+            <div class="container story-layout">
+                <div class="story-heading reveal">
+                    <p class="eyebrow eyebrow-light"><span></span> KIND WORDS</p>
+                    <h2>Home is a<br>feeling.</h2>
+                    <p>And nothing makes us happier than helping someone find it.</p>
+                    <div class="story-controls"><button id="prevStory"
+                            aria-label="Previous testimonial">←</button><button id="nextStory"
+                            aria-label="Next testimonial">→</button></div>
+                </div>
+                <article class="testimonial reveal" aria-live="polite">
+                    <div class="quote-mark">“</div>
+                    <blockquote id="testimonialQuote"></blockquote>
+                    <div class="quote-person">
+                        <div class="avatar" id="testimonialAvatar"></div>
+                        <div><strong id="testimonialName"></strong><span id="testimonialMeta"></span></div>
+                        <div class="quote-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container contact-layout reveal">
+                <div>
+                    <p class="eyebrow"><span></span> YOUR NEXT CHAPTER</p>
+                    <h2>Let's find your<br><em>kind of home.</em></h2>
+                </div>
+                <div class="contact-action">
+                    <p>Tell us what you're dreaming of. We'll take it from here.</p><a class="button button-green"
+                        href="mailto:hello@havenandco.example">Start a conversation <span>↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand"><a class="brand brand-light" href="#top"><span
+                        class="brand-mark">H</span><span>haven<span class="brand-dot">.</span></span></a>
+                <p>Good homes for the life you're building.</p>
+                <div class="social-links"><a href="#contact" aria-label="Instagram">ig</a><a href="#contact"
+                        aria-label="Pinterest">p</a><a href="#contact" aria-label="LinkedIn">in</a></div>
+            </div>
+            <div class="footer-links">
+                <h3>Find your way</h3><a href="#properties">Our homes</a><a href="#about">Our story</a><a
+                    href="#calculator">Mortgage guide</a><a href="#contact">Get in touch</a>
+            </div>
+            <div class="footer-newsletter">
+                <h3>A good note, now and then.</h3>
+                <p>New homes, local love, and useful little things. No noise.</p>
+                <form id="newsletterForm" novalidate><label class="sr-only" for="newsletterEmail">Your email
+                        address</label>
+                    <div class="newsletter-input"><input id="newsletterEmail" type="email"
+                            placeholder="Your email address" required><button type="submit"
+                            aria-label="Subscribe to newsletter">→</button></div>
+                    <p class="form-message" id="newsletterMessage" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom"><span>© <span id="currentYear"></span> Haven & Co. Made for finding
+                home.</span>
+            <div><a href="#contact">Privacy</a><a href="#contact">Terms</a><span>Made with care <b>♥</b></span></div>
+        </div>
+    </footer>
+
+    <div class="modal-backdrop" id="propertyModal" aria-hidden="true">
+        <section class="property-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Close property details">×</button>
+            <div class="modal-gallery"><img id="modalImage" src="" alt=""><button class="gallery-arrow gallery-prev"
+                    id="galleryPrev" aria-label="Previous image">←</button><button class="gallery-arrow gallery-next"
+                    id="galleryNext" aria-label="Next image">→</button>
+                <div class="gallery-count" id="galleryCount"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-main">
+                    <p class="eyebrow" id="modalStatus"></p>
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-location" id="modalLocation"></p>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <h3>What makes it special</h3>
+                    <ul class="amenities-list" id="modalAmenities"></ul>
+                </div>
+                <aside class="agent-card">
+                    <div class="agent-avatar">AM</div>
+                    <div><strong>Alex Morgan</strong><span>Your JONI advisor</span></div>
+                    <p>Questions about this home? Alex would love to show you around.</p><a
+                        href="mailto:hello@havenandco.example" class="text-button">Message Alex <span>↗</span></a>
+                    <form id="viewingForm">
+                        <h3>Come see it</h3><label for="viewingName">Your name</label><input id="viewingName"
+                            name="name" required placeholder="Jamie Parker"><label for="viewingEmail">Email
+                            address</label><input id="viewingEmail" name="email" type="email" required
+                            placeholder="you@example.com"><label for="viewingDate">A day that works</label><input
+                            id="viewingDate" name="date" type="date" required><button class="button button-green"
+                            type="submit">Request a viewing</button>
+                        <p class="form-message" id="viewingMessage" aria-live="polite"></p>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
